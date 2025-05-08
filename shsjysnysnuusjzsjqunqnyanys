@@ -1,0 +1,28 @@
+local TextChatService = game:GetService("TextChatService")
+
+local function SendChatMessage(message)
+    if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+        local textChannel = TextChatService:WaitForChild("TextChannels"):WaitForChild("RBXGeneral")
+        textChannel:SendAsync(message)
+    else
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+    end
+end
+
+SendChatMessage("Мы не пираты Йоу Хоу нелегальный контент игры, музыка, фильмы в сети интернет")
+task.wait(1.5)
+SendChatMessage("Всё сокровища мира доступны в момент")
+task.wait(1.5)
+SendChatMessage("Но мы не пираты le le le")
+task.wait(1.5)
+SendChatMessage("Кто-то качает Торрент")
+task.wait(1.5)
+SendChatMessage("Торрент")
+task.wait(1.5)
+SendChatMessage("Что поделаешь альтернативы коль нет")
+task.wait(1.5)
+SendChatMessage("А кто-то качает права")
+task.wait(1.5)
+SendChatMessage("Права")
+task.wait(1.5)
+SendChatMessage("И кого-то ждёт провал")
